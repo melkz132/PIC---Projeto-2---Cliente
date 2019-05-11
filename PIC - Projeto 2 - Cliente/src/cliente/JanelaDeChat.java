@@ -1,3 +1,4 @@
+package cliente;
 import javax.swing.*;
 import javax.swing.text.*;
 import javax.swing.event.*;
