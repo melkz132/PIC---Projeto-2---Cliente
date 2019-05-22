@@ -28,7 +28,7 @@ public class JanelaPrincipal extends JFrame implements ActionListener{
 	private void montaTela(){
 
 		JPanel painelPrincipal = new JPanel();
-
+		
 		preparaJanela();
 		preparaPainelPrincipal(painelPrincipal);
 		
@@ -38,12 +38,16 @@ public class JanelaPrincipal extends JFrame implements ActionListener{
 		
 		pesquisaField.setColumns(10);
 
-		
-		painelPrincipal.add(pesquisaLabel);	
-		painelPrincipal.add(pesquisaField);
+		JPanel painelLay = new JPanel(new GridLayout(0,1));
+		JPanel buttonLay = new JPanel(new GridLayout(1,1));
+
+		painelPrincipal.add(painelLay);
+		painelPrincipal.add(buttonLay);
+		painelLay.add(pesquisaLabel);	
+		painelLay.add(pesquisaField);
 	
-		preparaBotaoCarregar(painelPrincipal);
-		preparaBotaoSair(painelPrincipal);
+		preparaBotaoCarregar(buttonLay);
+		preparaBotaoSair(buttonLay);
 		mostraJanela();
 
 	}
